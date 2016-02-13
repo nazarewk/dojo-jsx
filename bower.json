@@ -21,7 +21,8 @@
   "private": false,
   "ignore": [
     "*",
-    "!/jsx"
+    "!/jsx/",
+    "!/README.md"
   ],
   "dependencies": {
     "dojo": "dojo/dojo#^1.10.4",
