@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+<div id="app"></div>
+<script>
+    var dojoConfig = {
+        async: true,
+        baseUrl: '/demo/bower_components',
+        packages: [{
+            name: 'dojo',
+            location: 'dojo'
+        }, {
+            name: 'react',
+            location: 'react',
+            main: 'react' /* this is crucial,
+            otherwise dojo tries to load 'main.js' and fails */
+        }, {
+            name: 'jsx',
+            location: 'dojo-jsx/jsx'
+        }, {
+            name: 'app',
+            location: '/demo/app'
+        }],
+        deps: [
+            'app/app'
+        ]
+    };
+</script>
+<script src="/demo/bower_components/dojo/dojo.js"></script>
+</body>
+</html>
