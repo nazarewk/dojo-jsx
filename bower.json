@@ -4,7 +4,7 @@
     "Krzysztof Nazarewski <nazarewk@gmail.com>"
   ],
   "description": "Thin wrapper for loading Dojo + JSX modules.",
-  "homepage": "https://github.com/nazarewk/dojo-jsx",
+  "homepage": "http://nazarewk.github.io/dojo-jsx",
   "moduleType": [
     "amd"
   ],

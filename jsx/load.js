@@ -25,6 +25,10 @@ define([
 ], function (xhr,
              Babel,
              React) {
+    if (window) {
+        window.React = React;
+    }
+
     var cache = {};
     var jsRegex = /\.js$/;
     var jsxRegex = /\.jsx$/;
