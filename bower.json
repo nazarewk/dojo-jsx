@@ -31,6 +31,6 @@
     "babel.js",
     "createComponent.js",
     "load.js",
-    "main.js",
+    "main.js"
   ]
 }
