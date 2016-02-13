@@ -1,12 +1,18 @@
 define([
-    'react/react'
-], function (React) {
-    return createComponent;
+  'react/react',
+  'react/react-dom'
+], function (React, ReactDOM) {
+  return createComponent;
 
-    function createComponent(kwargs) {
-        var cls = React.createClass(kwargs);
-        var factory = React.createFactory(cls);
-        factory.__class__ = cls;
-        return factory;
+  function createComponent(kwargs) {
+    var type = React.createClass(kwargs);
+    var factory = React.createFactory(type);
+    // factory.type === type
+    factory.render = render;
+    return factory;
+
+    function render(kwargs, node) {
+      return ReactDOM.render(factory(kwargs), node);
     }
+  }
 });
