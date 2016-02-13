@@ -25,7 +25,7 @@ Thin wrapper for loading Dojo + JSX modules.
             otherwise dojo tries to load `react/main.js` and fails */
         }, {
             name: 'jsx',
-            location: 'jsx'
+            location: 'dojo-jsx/jsx' // Makes it easier to use
         }, {
             name: 'app',
             location: '/app'

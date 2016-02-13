@@ -13,6 +13,11 @@
     "type": "git",
     "url": "git://github.com/nazarewk/dojo-jsx.git"
   },
+  "keywords": [
+    "dojo",
+    "react",
+    "jsx"
+  ],
   "private": false,
   "ignore": [
     "*",
@@ -21,5 +26,11 @@
   "dependencies": {
     "dojo": "dojo/dojo#^1.10.4",
     "react": "^0.14.7"
-  }
+  },
+  "main": [
+    "babel.js",
+    "createComponent.js",
+    "load.js",
+    "main.js",
+  ]
 }
