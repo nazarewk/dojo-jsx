@@ -1,0 +1,20 @@
+{
+  "name": "dojo-react",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Krzysztof Nazarewski",
+    "email": "nazarewk@gmail.com",
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.5.2",
+    "babel-standalone": "^6.4.4",
+    "gulp": "^3.9.1",
+    "gulp-serve": "^1.2.0"
+  }
+}

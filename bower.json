@@ -1,0 +1,25 @@
+{
+  "name": "dojo-jsx",
+  "authors": [
+    "Krzysztof Nazarewski <nazarewk@gmail.com>"
+  ],
+  "description": "Thin wrapper for loading Dojo + JSX modules.",
+  "homepage": "https://github.com/nazarewk/dojo-jsx",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nazarewk/dojo-jsx.git"
+  },
+  "private": false,
+  "ignore": [
+    "*",
+    "!/jsx"
+  ],
+  "dependencies": {
+    "dojo": "dojo/dojo#^1.10.4",
+    "react": "^0.14.7"
+  }
+}
