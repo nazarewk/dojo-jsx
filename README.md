@@ -25,7 +25,8 @@ Thin wrapper for loading Dojo + JSX modules.
             otherwise dojo tries to load `react/main.js` and fails */
         }, {
             name: 'jsx',
-            location: 'dojo-jsx/jsx' // Makes it easier to use
+            location: 'dojo-jsx/jsx',
+            main: 'load'
         }, {
             name: 'app',
             location: '/app'
@@ -61,7 +62,7 @@ define([
 ```javascript
 require([
     'react/react-dom',
-    'jsx/load!app/Comment'
+    'jsx!app/Comment'
 ], function (ReactDOM, Comment) {
     var container = document.getElementById('app');
     return ReactDOM.render(Comment(), container);
