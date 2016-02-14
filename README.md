@@ -1,9 +1,11 @@
 # dojo-jsx
 
 Thin wrapper for loading Dojo + JSX modules.
+
+[Working demo](https://nazarewk.github.io/dojo-jsx/demo)
+
 # Development quick start
 
-[working demo](https://nazarewk.github.io/dojo-jsx/demo)
 
     bower install dojo-jsx
 
