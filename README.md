@@ -3,6 +3,8 @@
 Thin wrapper for loading Dojo + JSX modules.
 # Development quick start
 
+[working demo](https://nazarewk.github.io/dojo-jsx/demo)
+
     bower install dojo-jsx
 
 ## `/index.html`
