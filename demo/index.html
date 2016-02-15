@@ -11,22 +11,22 @@
         async: true,
         baseUrl: '',
         packages: [{
-            name: 'dojo',
-            location: '../bower_components/dojo'
-        }, {
             name: 'react',
-            location: '../bower_components/react',
+            location: 'bower_components/react',
             main: 'react' /* this is crucial,
             otherwise dojo tries to load 'main.js' and fails */
         }, {
             name: 'jsx',
-            location: '../bower_components/dojo-jsx/jsx'
+            location: 'bower_components/dojo-jsx/jsx'
         }],
         deps: [
             'jsx!app'
         ]
     };
 </script>
-<script src="../bower_components/dojo/dojo.js"></script>
+<!--
+It's just that GitHub Pages have trouble serving stuff beginning with underscore
+-->
+<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
 </body>
 </html>
