@@ -26,7 +26,6 @@
           <a href="https://github.com/nazarewk/dojo-jsx/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
           <a href="https://github.com/nazarewk/dojo-jsx/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
           <a href="https://github.com/nazarewk/dojo-jsx" id="view-on-github" class="button"><span>View on GitHub</span></a>
-          <a href="demo" class="button"><span>Run demo</span></a>
         </section>
 
         <hr>
@@ -36,6 +35,8 @@
 <a id="dojo-jsx" class="anchor" href="#dojo-jsx" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>dojo-jsx</h1>
 
 <p>Thin wrapper for loading Dojo + JSX modules.</p>
+
+<p><a href="https://nazarewk.github.io/dojo-jsx/demo">Working demo</a></p>
 
 <h1>
 <a id="development-quick-start" class="anchor" href="#development-quick-start" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development quick start</h1>
@@ -65,7 +66,8 @@
 <span class="pl-s1"><span class="pl-c">            otherwise dojo tries to load `react/main.js` and fails */</span></span>
 <span class="pl-s1">        }, {</span>
 <span class="pl-s1">            name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>jsx<span class="pl-pds">'</span></span>,</span>
-<span class="pl-s1">            location<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>dojo-jsx/jsx<span class="pl-pds">'</span></span> <span class="pl-c">// Makes it easier to use</span></span>
+<span class="pl-s1">            location<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>dojo-jsx/jsx<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">            main<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>load<span class="pl-pds">'</span></span></span>
 <span class="pl-s1">        }, {</span>
 <span class="pl-s1">            name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>app<span class="pl-pds">'</span></span>,</span>
 <span class="pl-s1">            location<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>/app<span class="pl-pds">'</span></span></span>
@@ -103,7 +105,7 @@
 
 <div class="highlight highlight-source-js"><pre><span class="pl-c1">require</span>([
     <span class="pl-s"><span class="pl-pds">'</span>react/react-dom<span class="pl-pds">'</span></span>,
-    <span class="pl-s"><span class="pl-pds">'</span>jsx/load!app/Comment<span class="pl-pds">'</span></span>
+    <span class="pl-s"><span class="pl-pds">'</span>jsx!app/Comment<span class="pl-pds">'</span></span>
 ], <span class="pl-k">function</span> (<span class="pl-smi">ReactDOM</span>, <span class="pl-smi">Comment</span>) {
     <span class="pl-k">var</span> container <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>app<span class="pl-pds">'</span></span>);
     <span class="pl-k">return</span> <span class="pl-smi">ReactDOM</span>.<span class="pl-en">render</span>(<span class="pl-en">Comment</span>(), container);
