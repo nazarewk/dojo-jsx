@@ -20,14 +20,13 @@
             otherwise dojo tries to load 'main.js' and fails */
         }, {
             name: 'jsx',
-            location: '/jsx',
-            main: 'load'
+            location: '/jsx'
         }, {
             name: 'app',
             location: '/demo/app'
         }],
         deps: [
-            'app/app'
+            'jsx!app/app'
         ]
     };
 </script>

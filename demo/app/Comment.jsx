@@ -1,7 +1,7 @@
 define([
-    'jsx/createComponent'
-], function (createComponent) {
-    return createComponent({
+    'react/react'
+], function (React) {
+    return React.createClass({
         render: function () {
             return (
                 <div className="commentBox">
