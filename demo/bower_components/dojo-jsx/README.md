@@ -1,11 +1,19 @@
 # dojo-jsx
 
 Thin wrapper for loading Dojo + JSX modules.
-# Development quick start
 
-    bower install dojo-jsx
+[live demo](https://nazarewk.github.io/dojo-jsx/demo)
 
-## `/index.html`
+## Development quick start
+
+1. `bower install dojo-jsx`
+2. (optionally) set up `JSX` -> `JS` compiler,
+3. prepend absolute (relative is not supported) module path with `jsx!`
+
+
+## In-browser (development) example
+
+### `/index.html`
 ```html
 <html>
 <head></head>
@@ -25,13 +33,13 @@ Thin wrapper for loading Dojo + JSX modules.
             otherwise dojo tries to load `react/main.js` and fails */
         }, {
             name: 'jsx',
-            location: 'dojo-jsx/jsx' // Makes it easier to use
+            location: 'dojo-jsx/jsx'
         }, {
             name: 'app',
             location: '/app'
         }],
         deps: [
-            'app/app'
+            'jsx!app/app'
         ]
     };
 </script>
@@ -40,12 +48,12 @@ Thin wrapper for loading Dojo + JSX modules.
 </html>
 ```
 
-## `/app/Comment.jsx`
+### `/app/Comment.jsx`
 ```javascript
 define([
-    'jsx/createComponent'
-], function (createComponent) {
-    return createComponent({
+    'react/react'
+], function (React) {
+    return React.createClass({
         render: function () {
             return (
                 <div className="commentBox">
@@ -57,13 +65,15 @@ define([
 });
 ```
 
-## `/app/app.js`
+### `/app/app.jsx`
 ```javascript
 require([
-    'react/react-dom',
-    'jsx/load!app/Comment'
+  'react/react-dom',
+  'jsx!app/Comment'
 ], function (ReactDOM, Comment) {
-    var container = document.getElementById('app');
-    return ReactDOM.render(Comment(), container);
+  return ReactDOM.render(
+    <Comment />,
+    document.getElementById('app')
+  )
 });
 ```

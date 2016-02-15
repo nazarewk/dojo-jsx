@@ -12,7 +12,7 @@
         baseUrl: '',
         packages: [{
             name: 'dojo',
-            location: '//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo'
+            location: 'dojo'
         }, {
             name: 'react',
             location: 'bower_components/react',
@@ -20,17 +20,16 @@
             otherwise dojo tries to load 'main.js' and fails */
         }, {
             name: 'jsx',
-            location: 'bower_components/dojo-jsx/jsx',
-            main: 'load'
+            location: 'bower_components/dojo-jsx/jsx'
         }, {
             name: 'app',
             location: 'app'
         }],
         deps: [
-            'app/app'
+            'jsx!app'
         ]
     };
 </script>
-<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+<script src="/bower_components/dojo/dojo.js"></script>
 </body>
 </html>
