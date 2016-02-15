@@ -36,17 +36,24 @@
 
 <p>Thin wrapper for loading Dojo + JSX modules.</p>
 
-<p><a href="https://nazarewk.github.io/dojo-jsx/demo">Working demo</a></p>
-
-<h1>
-<a id="development-quick-start" class="anchor" href="#development-quick-start" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development quick start</h1>
-
-<pre><code>bower install dojo-jsx
-</code></pre>
+<p><a href="https://nazarewk.github.io/dojo-jsx/demo">live demo</a></p>
 
 <h2>
+<a id="development-quick-start" class="anchor" href="#development-quick-start" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development quick start</h2>
+
+<ol>
+<li><code>bower install dojo-jsx</code></li>
+<li>(optionally) set up <code>JSX</code> -&gt; <code>JS</code> compiler,</li>
+<li>prepend absolute (relative is not supported) module path with <code>jsx!</code>
+</li>
+</ol>
+
+<h2>
+<a id="in-browser-development-example" class="anchor" href="#in-browser-development-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>In-browser (development) example</h2>
+
+<h3>
 <a id="indexhtml" class="anchor" href="#indexhtml" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>/index.html</code>
-</h2>
+</h3>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">html</span>&gt;
 &lt;<span class="pl-ent">head</span>&gt;&lt;/<span class="pl-ent">head</span>&gt;
@@ -66,14 +73,13 @@
 <span class="pl-s1"><span class="pl-c">            otherwise dojo tries to load `react/main.js` and fails */</span></span>
 <span class="pl-s1">        }, {</span>
 <span class="pl-s1">            name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>jsx<span class="pl-pds">'</span></span>,</span>
-<span class="pl-s1">            location<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>dojo-jsx/jsx<span class="pl-pds">'</span></span>,</span>
-<span class="pl-s1">            main<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>load<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">            location<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>dojo-jsx/jsx<span class="pl-pds">'</span></span></span>
 <span class="pl-s1">        }, {</span>
 <span class="pl-s1">            name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>app<span class="pl-pds">'</span></span>,</span>
 <span class="pl-s1">            location<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>/app<span class="pl-pds">'</span></span></span>
 <span class="pl-s1">        }],</span>
 <span class="pl-s1">        deps<span class="pl-k">:</span> [</span>
-<span class="pl-s1">            <span class="pl-s"><span class="pl-pds">'</span>app/app<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">            <span class="pl-s"><span class="pl-pds">'</span>jsx!app/app<span class="pl-pds">'</span></span></span>
 <span class="pl-s1">        ]</span>
 <span class="pl-s1">    };</span>
 <span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span>
@@ -81,14 +87,14 @@
 &lt;/<span class="pl-ent">body</span>&gt;
 &lt;/<span class="pl-ent">html</span>&gt;</pre></div>
 
-<h2>
+<h3>
 <a id="appcommentjsx" class="anchor" href="#appcommentjsx" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>/app/Comment.jsx</code>
-</h2>
+</h3>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-en">define</span>([
-    <span class="pl-s"><span class="pl-pds">'</span>jsx/createComponent<span class="pl-pds">'</span></span>
-], <span class="pl-k">function</span> (<span class="pl-smi">createComponent</span>) {
-    <span class="pl-k">return</span> <span class="pl-en">createComponent</span>({
+    <span class="pl-s"><span class="pl-pds">'</span>react/react<span class="pl-pds">'</span></span>
+], <span class="pl-k">function</span> (<span class="pl-smi">React</span>) {
+    <span class="pl-k">return</span> <span class="pl-smi">React</span>.<span class="pl-en">createClass</span>({
         <span class="pl-en">render</span><span class="pl-k">:</span> <span class="pl-k">function</span> () {
             <span class="pl-k">return</span> (
                 <span class="pl-k">&lt;</span>div className<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>commentBox<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
@@ -99,16 +105,18 @@
     });
 });</pre></div>
 
-<h2>
-<a id="appappjs" class="anchor" href="#appappjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>/app/app.js</code>
-</h2>
+<h3>
+<a id="appappjsx" class="anchor" href="#appappjsx" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>/app/app.jsx</code>
+</h3>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-c1">require</span>([
-    <span class="pl-s"><span class="pl-pds">'</span>react/react-dom<span class="pl-pds">'</span></span>,
-    <span class="pl-s"><span class="pl-pds">'</span>jsx!app/Comment<span class="pl-pds">'</span></span>
+  <span class="pl-s"><span class="pl-pds">'</span>react/react-dom<span class="pl-pds">'</span></span>,
+  <span class="pl-s"><span class="pl-pds">'</span>jsx!app/Comment<span class="pl-pds">'</span></span>
 ], <span class="pl-k">function</span> (<span class="pl-smi">ReactDOM</span>, <span class="pl-smi">Comment</span>) {
-    <span class="pl-k">var</span> container <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>app<span class="pl-pds">'</span></span>);
-    <span class="pl-k">return</span> <span class="pl-smi">ReactDOM</span>.<span class="pl-en">render</span>(<span class="pl-en">Comment</span>(), container);
+  <span class="pl-k">return</span> <span class="pl-smi">ReactDOM</span>.<span class="pl-en">render</span>(
+    <span class="pl-k">&lt;</span>Comment <span class="pl-k">/</span><span class="pl-k">&gt;</span>,
+    <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>app<span class="pl-pds">'</span></span>)
+  )
 });</pre></div>
         </section>
 
