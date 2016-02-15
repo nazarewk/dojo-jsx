@@ -12,24 +12,21 @@
         baseUrl: '',
         packages: [{
             name: 'dojo',
-            location: 'dojo'
+            location: '../bower_components/dojo'
         }, {
             name: 'react',
-            location: 'bower_components/react',
+            location: '../bower_components/react',
             main: 'react' /* this is crucial,
             otherwise dojo tries to load 'main.js' and fails */
         }, {
             name: 'jsx',
-            location: 'bower_components/dojo-jsx/jsx'
-        }, {
-            name: 'app',
-            location: 'app'
+            location: '../bower_components/dojo-jsx/jsx'
         }],
         deps: [
             'jsx!app'
         ]
     };
 </script>
-<script src="/bower_components/dojo/dojo.js"></script>
+<script src="../bower_components/dojo/dojo.js"></script>
 </body>
 </html>
