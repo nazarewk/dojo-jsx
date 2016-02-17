@@ -1,6 +1,6 @@
 # dojo-jsx
 
-Thin wrapper for loading Dojo + JSX modules.
+Thin wrapper for loading Dojo + JSX modules in development environment.
 
 [live demo](https://nazarewk.github.io/dojo-jsx/demo)
 
