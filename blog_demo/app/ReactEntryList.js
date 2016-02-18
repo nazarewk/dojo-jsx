@@ -12,11 +12,20 @@ define([], function () {
 
   return function (props) {
     return React.createElement(
-      "ul",
+      "div",
       null,
-      props.entries.map(function (entry, i) {
-        return React.createElement(Entry, { entry: entry, key: i });
-      })
+      React.createElement(
+        "h1",
+        null,
+        "Dojo + React version"
+      ),
+      React.createElement(
+        "ul",
+        null,
+        props.entries.map(function (entry, i) {
+          return React.createElement(Entry, { entry: entry, key: i });
+        })
+      )
     );
   };
 });
