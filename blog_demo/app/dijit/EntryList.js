@@ -20,10 +20,18 @@ define([
     },
 
     postCreate: function postCreate() {
+      this.inherited(arguments);
       var that = this;
       that.entries = that.item.map(function (entry) {
         return new Entry({item: entry}).placeAt(that.listNode);
       });
+    },
+
+    startup: function startup() {
+      this.inherited(arguments);
+      this.entries.forEach(function(entry) {
+        entry.startup();
+      })
     }
   });
 });
