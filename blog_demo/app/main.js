@@ -12,7 +12,9 @@ define(['dojo/dom', './ReactEntryList', './dijit/EntryList'], function (dom, Rea
 
   ReactDOM.render(React.createElement(ReactEntryList, { entries: entries }), dom.byId('react'));
 
-  new dijitEntryList({ item: entries }).placeAt(dom.byId('dijit'));
+  var widget = new dijitEntryList({ item: entries });
+  widget.placeAt(dom.byId('dijit'));
+  widget.startup();
 });
 
 //# sourceMappingURL=main.js.map

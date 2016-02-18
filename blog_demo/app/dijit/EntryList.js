@@ -13,8 +13,11 @@ define([
 
     buildRendering: function buildRendering() {
       this.inherited(arguments);
-      this.listNode = domConstruct.create('h1', {
+      domConstruct.create('h1', {
         innerHTML: 'Dojo + Dijit version'
+      }, this.domNode);
+      domConstruct.create('p', {
+        innerHTML: 'Click to display alert'
       }, this.domNode);
       this.listNode = domConstruct.create('ul', {}, this.domNode);
     },

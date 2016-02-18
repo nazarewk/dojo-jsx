@@ -13,5 +13,7 @@ define([
     dom.byId('react')
   );
 
-  new dijitEntryList({item: entries}).placeAt(dom.byId('dijit'));
+  var widget = new dijitEntryList({item: entries});
+  widget.placeAt(dom.byId('dijit'));
+  widget.startup();
 });

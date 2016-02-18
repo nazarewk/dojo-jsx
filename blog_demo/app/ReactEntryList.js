@@ -20,6 +20,11 @@ define([], function () {
         "Dojo + React version"
       ),
       React.createElement(
+        "p",
+        null,
+        "Click to display alert"
+      ),
+      React.createElement(
         "ul",
         null,
         props.entries.map(function (entry, i) {
