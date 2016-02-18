@@ -16,7 +16,7 @@ At some point i learned that [React][react] is just the View part of MVC and
 should not obstruct with the M & C. I toyed with the idea of using it
 with/instead of Dijit to make Dojo more accessible to the general public.
 
-Well... the day finally came.
+Well... the day finally came to put the idea into action.
 
 I have no experience whatsoever with React or modern (2015+) web development
 ideas so today i will stick to explaining pros & cons of Dojo as i know it,
