@@ -16,8 +16,8 @@ define([], () => {
       </ul>
       <h2>Files list:</h2>
       <ul>
-        <li><a href="app/main.jsx">app/main.jsx</a></li>
-        <li><a href="app/ReactEntryList.jsx">app/ReactEntryList.jsx</a></li>
+        <li><a href="app/main.jsx" target="_blank">app/main.jsx</a></li>
+        <li><a href="app/ReactEntryList.jsx" target="_blank">app/ReactEntryList.jsx</a></li>
       </ul>
     </div>
   );

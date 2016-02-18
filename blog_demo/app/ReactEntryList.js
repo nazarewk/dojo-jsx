@@ -44,7 +44,7 @@ define([], function () {
           null,
           React.createElement(
             "a",
-            { href: "app/main.jsx" },
+            { href: "app/main.jsx", target: "_blank" },
             "app/main.jsx"
           )
         ),
@@ -53,7 +53,7 @@ define([], function () {
           null,
           React.createElement(
             "a",
-            { href: "app/ReactEntryList.jsx" },
+            { href: "app/ReactEntryList.jsx", target: "_blank" },
             "app/ReactEntryList.jsx"
           )
         )
