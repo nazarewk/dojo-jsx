@@ -23,9 +23,9 @@ define([
       var files ='\
         <h2>Files list:</h2>\
         <ul> \
-          <li><a href="app/main.jsx">app/main.jsx</a></li> \
-          <li><a href="app/dijit/Entry.js">app/dijit/Entry.js</a></li> \
-          <li><a href="app/dijit/EntryList.js">app/dijit/EntryList.js</a></li> \
+          <li><a href="app/main.jsx" target="_blank">app/main.jsx</a></li> \
+          <li><a href="app/dijit/Entry.js" target="_blank">app/dijit/Entry.js</a></li> \
+          <li><a href="app/dijit/EntryList.js" target="_blank">app/dijit/EntryList.js</a></li> \
         </ul>';
       domConstruct.place(domConstruct.toDom(files), this.domNode);
     },
