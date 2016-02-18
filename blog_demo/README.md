@@ -2,7 +2,7 @@
 
 # Introduction
 
-![*Yeah, well, that's just like your opinon, man.*](http://www.teslamotorsclub.com/attachment.php?attachmentid=47346&d=1397707694)
+![*Yeah, well, that's just like your opinon, man.*][http://www.teslamotorsclub.com/attachment.php?attachmentid=47346&d=1397707694]
 
 I love expressing my opinion about everything and then having a healthy
 discussion about it, this article will be no different.
@@ -12,7 +12,7 @@ about Dojo to make it objective analysis of the problem.
 
 ## What is the purpose of this article?
 
-At some point i learned that [React](react) is just the View part of MVC and
+At some point i learned that [React][react] is just the View part of MVC and
 should not obstruct with the M & C. I toyed with the idea of using it
 with/instead of Dijit to make Dojo more accessible to the general public.
 
@@ -23,13 +23,13 @@ ideas so today i will stick to explaining pros & cons of Dojo as i know it,
 why would i even want to do such thing as mixing it with React
 and finally share my proof of concept.
 
-I am planning to follow up with my own implementation of [Today i Learned](TIL)
+I am planning to follow up with my own implementation of [Today i Learned][TIL]
 idea and share my experiences in future articles.
 
-So far i have managed to make an in-browser [`.jsx` loader](dojo-jsx) for Dojo,
+So far i have managed to make an in-browser [`.jsx` loader][dojo-jsx] for Dojo,
 sadly i came to conclusion it is not very useful outside development.
-You can check the progress [here](tilapp), i abandoned the idea of using above
-mentioned loader for [Jetbrains's Babel File Watcher](jetbrains-babel) as it
+You can check the progress [here][tilapp], i abandoned the idea of using above
+mentioned loader for [Jetbrains's Babel File Watcher][jetbrains-babel] as it
 is way less obtrusive and simpler to set up that any other JSX transpiler.
 
 ## Who am i?
@@ -48,10 +48,10 @@ Python developer since nobody wants to use my beloved Dojo. Hopefully this
 *series* of articles and release of Dojo 2 will change the situation.
 
 
-# What exactly is [Dojo Toolkit](dojo)?
+# What exactly is [Dojo Toolkit][dojo]?
 
 You may or may not have heard about it before. It is one of the
-[oldest](dojo-history) JavaScript libraries out there and a pioneer of
+[oldest][dojo-history] JavaScript libraries out there and a pioneer of
 the JavaScript itself as we know it today. It might be getting old and
 is notoriously hard to get started with, but i still think it is one of the best
 written and the most complete JavaScript libraries there are.
@@ -77,11 +77,11 @@ Dojo is split into 3 official modules:
 
 I also know of 3 *future* modules which will be incorporated into Dojo 2
 release:
-- [`dstore`](dstore) - replaces `dojo/store`,
+- [`dstore`][dstore] - replaces `dojo/store`,
     the Data Storage implementation of Dojo,
-- [`dmodel`](dmodel) - originally part of `dstore`,
+- [`dmodel`][dmodel] - originally part of `dstore`,
     the Data Modelling part of Dojo,
-- [`dgrid`](dgrid) - Dojo's grid implementation, call it whatever you want:
+- [`dgrid`][dgrid] - Dojo's grid implementation, call it whatever you want:
     i absolutely love it for displaying tabular data/extending it with whatever
     feature i might dream of,
 
@@ -101,7 +101,7 @@ hardest and most disgusting part of Dojo.
 
 ## Random games comparisons
 Dojo is to Angular what:
-- [Defense of the Ancients](dota) is to [League of Legends](lol),
+- [Defense of the Ancients][dota] is to [League of Legends][lol],
 - Counter Strike is to Quake/Team Fortress 2,
 - Call of Duty/Battlefield to Quake/Team Fortress 2,
 - Starcraft is to Warcraft 3,
@@ -113,8 +113,8 @@ got the hang of it it will *simply work*.
 ## Dojo 2
 
 In recent years it started falling behind the frantically developing JavaScript
-world pending a full rewrite in form of [Dojo 2](dojo2). I had a pleasure to use
-some of the new modules ([`dstore`](dstore) and [`dgrid`](dgrid)) in their
+world pending a full rewrite in form of [Dojo 2][dojo2]. I had a pleasure to use
+some of the new modules ([`dstore`][dstore] and [`dgrid`][dgrid]) in their
 infancy and i sincerely hope that the rewrite will give it entirely new life.
 
 
@@ -122,7 +122,7 @@ infancy and i sincerely hope that the rewrite will give it entirely new life.
 
 Some people love Dijit, i am not one of them. While stock implementation is
 a lot closer to Angular in terms of opinionation and ease of use, the Dijit's
-core [`_WidgetBase`](widgetbase) is way harder to use than it should be.
+core [`_WidgetBase`][widgetbase] is way harder to use than it should be.
 
 Basically Dijit lacks easy to use templating system while it is React's JSX's
 greatest feature. Simple as that.
@@ -130,13 +130,13 @@ greatest feature. Simple as that.
 # Proof of concept
 
 Great, you are still here. So let's get to the proof of concept example.
-You can see the fully working comparison of React vs Dijit [here](example).
+You can see the fully working comparison of React vs Dijit [here][example].
 
 ## What are we doing?
 
 I tried something more ambitious, but my lack of knowledge of React told me
 
-![You shall not pass!](http://i.stack.imgur.com/2BvbQ.jpg)
+![You shall not pass!][http://i.stack.imgur.com/2BvbQ.jpg]
 
 So here we are: displaying unordered list of titles and getting the personalized
 `alert()` upon clicking them.
@@ -145,7 +145,7 @@ As i mentioned earlier, i used PyCharm's File Watcher to convert `.jsx` to `ES5`
 using Babel serving it with `gulp-serve`, that's all the setup i needed.
 
 ## Issues and insights worth mentioning
-- [`AMD`](modules) is subset of Dojo's AMD implementation, Dojo had them
+- [`AMD`][modules] is subset of Dojo's AMD implementation, Dojo had them
     long before it became standard and has extra loaders that didn't make it
     into the final standard, so it is kind of like a `square` is a `rectangle`,
     but not the other way around,
@@ -383,7 +383,7 @@ define([], () => {
 
 # Conclusions
 
-I am not sure how it will work out in my [Today i Learned app](tilapp), but
+I am not sure how it will work out in my [Today i Learned app][tilapp], but
 for now using React instead of custom Dijit looks very promising in solving
 the problem of Dojo being too complicated for the average mortal.
 
@@ -391,23 +391,23 @@ Hopefully i will keep you posted in the follow-ups and possibly my
 Engineer/Bachelor Thesis (whatever is the proper name in English).
 
 
-[TIL]: (https://github.com/jbranchaud/til)
-[tilapp]: (https://github.com/nazarewk/tilapp)
+[TIL]: https://github.com/jbranchaud/til
+[tilapp]: https://github.com/nazarewk/tilapp
 
-[dojo-jsx]: (https://github.com/nazarewk/dojo-jsx)
-[dojo]: (https://dojotoolkit.org/)
-[dojo-history]: (https://en.wikipedia.org/wiki/Dojo_Toolkit#Release_history)
-[dojo2]: (https://dojotoolkit.org/community/roadmap/)
-[dgrid]: (http://dgrid.io/)
-[dstore]: (http://dstorejs.io/)
-[dmodel]: (https://github.com/SitePen/dmodel)
-[widgetbase]: (https://dojotoolkit.org/documentation/tutorials/1.10/understanding_widgetbase/index.html)
+[dojo-jsx]: https://github.com/nazarewk/dojo-jsx
+[dojo]: https://dojotoolkit.org/
+[dojo-history]: https://en.wikipedia.org/wiki/Dojo_Toolkit#Release_history
+[dojo2]: https://dojotoolkit.org/community/roadmap/
+[dgrid]: http://dgrid.io/
+[dstore]: http://dstorejs.io/
+[dmodel]: https://github.com/SitePen/dmodel
+[widgetbase]: https://dojotoolkit.org/documentation/tutorials/1.10/understanding_widgetbase/index.html
 
-[example]: (http://nazarewk.github.io/dojo-jsx/blog_demo/)
+[example]: http://nazarewk.github.io/dojo-jsx/blog_demo/
 
-[react]: (https://facebook.github.io/react/)
-[jetbrains-babel]: (http://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/)
-[modules]: (https://medium.com/@brianleroux/es6-modules-amd-and-commonjs-c1acefbe6fc0#.ic17udaoc)
+[react]: https://facebook.github.io/react/
+[jetbrains-babel]: http://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/
+[modules]: https://medium.com/@brianleroux/es6-modules-amd-and-commonjs-c1acefbe6fc0#.ic17udaoc
 
-[dota]: (http://blog.dota2.com/?l=english)
-[lol]: (http://leagueoflegends.com)
+[dota]: http://blog.dota2.com/?l=english
+[lol]: http://leagueoflegends.com
