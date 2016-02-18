@@ -24,7 +24,8 @@ define([
         '<h2>Files list:</h2>' +
         '<ul>' +
         '<li><a href="app/main.jsx">app/main.jsx</a></li>' +
-        '<li><a href="app/ReactEntryList.jsx">app/ReactEntryList.jsx</a></li>' +
+        '<li><a href="app/dijit/Entry.js">app/dijit/Entry.js</a></li>' +
+        '<li><a href="app/dijit/EntryList.js">app/dijit/EntryList.js</a></li>' +
         '</ul>';
       domConstruct.toDom(files, this.domNode);
     },
