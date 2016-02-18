@@ -20,6 +20,13 @@ define([
         innerHTML: 'Click to display alert'
       }, this.domNode);
       this.listNode = domConstruct.create('ul', {}, this.domNode);
+      var files =
+        '<h2>Files list:</h2>' +
+        '<ul>' +
+        '<li><a href="app/main.jsx">app/main.jsx</a></li>' +
+        '<li><a href="app/ReactEntryList.jsx">app/ReactEntryList.jsx</a></li>' +
+        '</ul>';
+      domConstruct.toDom(files, this.domNode);
     },
 
     postCreate: function postCreate() {
@@ -32,7 +39,7 @@ define([
 
     startup: function startup() {
       this.inherited(arguments);
-      this.entries.forEach(function(entry) {
+      this.entries.forEach(function (entry) {
         entry.startup();
       })
     }

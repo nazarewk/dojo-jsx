@@ -14,6 +14,11 @@ define([], () => {
           <Entry entry={entry} key={i}/>
         ))}
       </ul>
+      <h2>Files list:</h2>
+      <ul>
+        <li><a href="app/main.jsx">app/main.jsx</a></li>
+        <li><a href="app/ReactEntryList.jsx">app/ReactEntryList.jsx</a></li>
+      </ul>
     </div>
   );
 });
