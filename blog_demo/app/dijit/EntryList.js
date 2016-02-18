@@ -20,13 +20,13 @@ define([
         innerHTML: 'Click to display alert'
       }, this.domNode);
       this.listNode = domConstruct.create('ul', {}, this.domNode);
-      var files =
-        '<h2>Files list:</h2>' +
-        '<ul>' +
-        '<li><a href="app/main.jsx">app/main.jsx</a></li>' +
-        '<li><a href="app/dijit/Entry.js">app/dijit/Entry.js</a></li>' +
-        '<li><a href="app/dijit/EntryList.js">app/dijit/EntryList.js</a></li>' +
-        '</ul>';
+      var files ='\
+        <h2>Files list:</h2>\
+        <ul> \
+          <li><a href="app/main.jsx">app/main.jsx</a></li> \
+          <li><a href="app/dijit/Entry.js">app/dijit/Entry.js</a></li> \
+          <li><a href="app/dijit/EntryList.js">app/dijit/EntryList.js</a></li> \
+        </ul>';
       domConstruct.toDom(files, this.domNode);
     },
 
