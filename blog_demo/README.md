@@ -2,7 +2,7 @@
 
 # Introduction
 
-![*Yeah, well, that's just like your opinon, man.*][http://www.teslamotorsclub.com/attachment.php?attachmentid=47346&d=1397707694]
+![*Yeah, well, that's just like your opinon, man.*](http://www.teslamotorsclub.com/attachment.php?attachmentid=47346&d=1397707694)
 
 I love expressing my opinion about everything and then having a healthy
 discussion about it, this article will be no different.
@@ -136,7 +136,7 @@ You can see the fully working comparison of React vs Dijit [here][example].
 
 I tried something more ambitious, but my lack of knowledge of React told me
 
-![You shall not pass!][http://i.stack.imgur.com/2BvbQ.jpg]
+![You shall not pass!](http://i.stack.imgur.com/2BvbQ.jpg)
 
 So here we are: displaying unordered list of titles and getting the personalized
 `alert()` upon clicking them.
