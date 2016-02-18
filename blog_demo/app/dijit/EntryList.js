@@ -27,7 +27,7 @@ define([
           <li><a href="app/dijit/Entry.js">app/dijit/Entry.js</a></li> \
           <li><a href="app/dijit/EntryList.js">app/dijit/EntryList.js</a></li> \
         </ul>';
-      domConstruct.toDom(files, this.domNode);
+      domConstruct.place(domConstruct.toDom(files), this.domNode);
     },
 
     postCreate: function postCreate() {
