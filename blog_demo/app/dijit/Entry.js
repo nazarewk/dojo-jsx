@@ -5,18 +5,17 @@ define([
   'dojo/on'
 ], function (declare, _WidgetBase, domConstruct, on) {
   return declare([_WidgetBase], {
-    constructor: function (options) {
-      this.inherited(arguments);
-      this.item = options.item;
-    },
 
     buildRendering: function buildRendering() {
+      // Normally this.domNode is a div created in super() call
+      // this.inherited(arguments) in dojo's inheritance model
+      // we'll skip it and create <li> instead
       this.domNode = domConstruct.create('li', {
         innerHTML: this.item.title
       });
     },
 
-    startup: function startup() {
+    postCreate: function postCreate() {
       this.inherited(arguments);
       this.signal = on(this.domNode, 'click', this.item.onClick);
     },
