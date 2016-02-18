@@ -385,7 +385,7 @@ define([], () => {
 
 I am not sure how it will work out in my [Today i Learned app](tilapp), but
 for now using React instead of custom Dijit looks very promising in solving
-the problem.
+the problem of Dojo being too complicated for the average mortal.
 
 Hopefully i will keep you posted in the follow-ups and possibly my
 Engineer/Bachelor Thesis (whatever is the proper name in English).
