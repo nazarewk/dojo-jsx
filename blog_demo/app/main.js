@@ -1,6 +1,6 @@
 'use strict';
 
-define(['react/react-dom', 'dojo/dom', './ReactEntryList', './dijit/EntryList'], function (ReactDOM, dom, ReactEntryList, dijitEntryList) {
+define(['dojo/dom', './ReactEntryList', './dijit/EntryList'], function (dom, ReactEntryList, dijitEntryList) {
   var entries = [1, 2, 3, 4, 5].map(function (i) {
     return {
       title: 'Title ' + i,
