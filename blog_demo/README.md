@@ -34,18 +34,18 @@ is way less obtrusive and simpler to set up that any other JSX transpiler.
 
 ## Who am i?
 
+Currently i am a full stack developer at 10Clouds slowly changing into strictly
+Python developer since nobody wants to use my beloved Dojo. Hopefully this
+*series* of articles and release of Dojo 2 will change the situation.
+
 I had a pleasure (or misery) of learning Dojo as my first JavaScript library.
 I used it in a side project for almost a year and i definitely liked what i
 found. However it was not a land flowing with milk an honey - it has very high
 learning curve. It is simply not possible to make a quick start guide for it,
-took me 2 weeks to even start writing my Single Page Application.
+took me 2 weeks to even begin writing my Single Page Application.
 
 In retrospective i think the vast knowledge of ES5 standard i obtained using
 Dojo was well worth the effort.
-
-Currently i am a full stack developer at 10Clouds slowly changing into strictly
-Python developer since nobody wants to use my beloved Dojo. Hopefully this
-*series* of articles and release of Dojo 2 will change the situation.
 
 
 # What exactly is [Dojo Toolkit][dojo]?
@@ -122,7 +122,9 @@ infancy and i sincerely hope that the rewrite will give it entirely new life.
 
 Some people love Dijit, i am not one of them. While stock implementation is
 a lot closer to Angular in terms of opinionation and ease of use, the Dijit's
-core [`_WidgetBase`][widgetbase] is way harder to use than it should be.
+core [`_WidgetBase`][widgetbase] is way more complicated to use than it should
+be. It's kind of like Java: well defined and structured, but requires a lot of
+boilerplate code.
 
 Basically Dijit lacks easy to use templating system while it is React's JSX's
 greatest feature. Simple as that.
